@@ -1,0 +1,64 @@
+<view class="content">
+  <view class="haibao">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:183px;">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" style="width:100%;height:183px;"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="nav">
+    <view>
+      <view>
+        <image src="/images/icon/renwu.jpg" style="width:43px;height:43px;"></image>
+      </view>
+      <view>日常任务</view>
+    </view>
+    <view>
+      <view>
+        <image src="/images/icon/zhibo.jpg" style="width:43px;height:43px;"></image>
+      </view>
+      <view>直播LIVE</view>
+    </view>
+    <view>
+      <view>
+        <image src="/images/icon/shoufa.jpg" style="width:43px;height:43px;"></image>
+      </view>
+      <view>首发专场</view>
+    </view>
+    <view>
+      <view>
+        <image src="/images/icon/chengshi.jpg" style="width:43px;height:43px;"></image>
+      </view>
+      <view>城市专场</view>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="items">
+    <block wx:for="{{jobs}}">
+      <view class="item">
+        <view>
+          <image src="{{item.pic}}" style="width:64px;height:64px;"></image>
+        </view>
+        <view class="intro">
+          <view class="position">
+            <view class="name">{{item.name}}</view>
+            <view class="salary">{{item.salary}}</view>
+          </view>
+          <view class="name">
+            {{item.company}}
+          </view>
+          <view class="addressInfo">
+            <view class="address">{{item.province}} {{item.address}} {{item.year}} {{item.education}}</view>
+            <view class="date">{{item.date}}</view>
+          </view>
+          <view class="companyInfo">
+            {{item.companyType}} {{item.person}} {{item.business}}
+          </view>
+        </view>
+      </view>
+      <view class="line"></view>
+      </block>
+  </view>
+</view>
